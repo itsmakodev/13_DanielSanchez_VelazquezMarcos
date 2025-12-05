@@ -24,10 +24,19 @@ public class Main { //Declaración de la clase principal
             
             System.out.println("El tiempo que tarda en encontrar la ruta de la marcha silenciosa es: " + tiempoMarchaMS + "ms" );  
             
+            
             // problema 2
+            boolean[][] obligatorias = OjoCirithUngol.detectarObligatorias(mapa);
+
+            // Imprimir coordenadas de las celdas obligatorias
+            inicio = System.nanoTime();
+            OjoCirithUngol.imprimirObligatorias(obligatorias);
+            fin = System.nanoTime();
+            long tiempoOjoCirith = fin - inicio;
+            double tiempoOjoCirithMS = tiempoOjoCirith / 1000000.0;
             
-            
-          
+            System.out.println("El tiempo empleado para el calculo del problema 2 es: " + tiempoMarchaMS + "ms" );  
+
        } else {             //Si no existe, dar mensaje de error
             System.out.println("No se ha podido leer el mapa. ");
        }
