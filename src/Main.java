@@ -39,7 +39,7 @@ public class Main { //Declaración de la clase principal
             long tiempoOjoCirith = fin - inicio;
             double tiempoOjoCirithMS = tiempoOjoCirith / 1000000.0;
             
-            System.out.println("El tiempo empleado para el calculo del problema 2 es: " + tiempoMarchaMS + "ms" );  
+            System.out.println("El tiempo empleado para el calculo del problema 2 es: " + tiempoOjoCirithMS + "ms" );  
 
        } else {             //Si no existe, dar mensaje de error
             System.out.println("No se ha podido leer el mapa. ");
