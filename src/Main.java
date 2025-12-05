@@ -9,6 +9,10 @@ public class Main { //Declaración de la clase principal
         if (mapa != null){  //Si la matriz existe, mostrar mapa
             MostrarMapa.mostrarMapa(mapa);
             
+             //mostrar el mapa con emojis
+        
+            MatrizEmojis.MatrizEmojis();
+
             // problema 1
             
             // el calculo de los tiempos lo hacemos con nanos, nos quitamos de runnable y otras historias raras
