@@ -22,7 +22,7 @@ public class Main { //Declaración de la clase principal
             System.out.println("El coste mínimo de la ruta es: " + mejor);
             System.out.println(mejor + " Es la suma de todos los pasos de la ruta por el que hemos pasado para llegar al final");
             
-            System.out.println("El tiempo que tarda en encontrar la ruta de la marcha silenciosa es: " + tiempoMarchaMS);   
+            System.out.println("El tiempo que tarda en encontrar la ruta de la marcha silenciosa es: " + tiempoMarchaMS + "ms" );  
             
             // problema 2
             
