@@ -5,6 +5,7 @@ public class Main { //Declaración de la clase principal
     public static void main(String[] args) throws Exception { //Método principal (lanza excepciones)
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8)); //Salida en UTF8
         int[][] mapa = LeerMatrizCSV.leerMapa("mapa.csv");  //Ubicación del archivo que contiene el mapa
+        int C = 20; // ejemplo de coste máximo permitido
         
         if (mapa != null){  //Si la matriz existe, mostrar mapa
             MostrarMapa.mostrarMapa(mapa);
@@ -30,16 +31,30 @@ public class Main { //Declaración de la clase principal
             
             
             // problema 2
-            boolean[][] obligatorias = OjoCirithUngol.detectarObligatorias(mapa);
-
-            // Imprimir coordenadas de las celdas obligatorias
+              
             inicio = System.nanoTime();
-            OjoCirithUngol.imprimirObligatorias(obligatorias);
+            boolean[][] obligatorias = OjoCirithUngol.detectarObligatorias(mapa);
             fin = System.nanoTime();
             long tiempoOjoCirith = fin - inicio;
             double tiempoOjoCirithMS = tiempoOjoCirith / 1000000.0;
             
+            // Imprimir coordenadas de las celdas obligatorias
+            OjoCirithUngol.imprimirObligatorias(obligatorias);
+            
             System.out.println("El tiempo empleado para el calculo del problema 2 es: " + tiempoOjoCirithMS + "ms" );  
+            
+            // problema 3
+            
+            inicio = System.nanoTime();
+            SenderosDruadan.encontrarRutas(mapa, C);
+            fin = System.nanoTime();
+            long tiempoSenderosDruadan = fin - inicio;
+            double tiempoSenderosDruadanMS = tiempoSenderosDruadan / 1000000.0;
+            
+            // imprimir rutas
+            SenderosDruadan.imprimirRutas();
+            
+            System.out.println("El tiempo empleado para el calculo del problema 3 es: " + tiempoSenderosDruadanMS + "ms" );  
 
        } else {             //Si no existe, dar mensaje de error
             System.out.println("No se ha podido leer el mapa. ");
