@@ -15,7 +15,7 @@ public class Main { //Declaración de la clase principal
             MatrizEmojis.MatrizEmojis();
 
             // problema 1
-            
+            System.out.println("Problema 1:");           
             // el calculo de los tiempos lo hacemos con nanos, nos quitamos de runnable y otras historias raras
             long inicio = System.nanoTime();
             int mejor = MarchaSilenciosa.resolver(mapa);
@@ -31,7 +31,7 @@ public class Main { //Declaración de la clase principal
             
             
             // problema 2
-              
+            System.out.println("\nProblema 2:");           
             inicio = System.nanoTime();
             boolean[][] obligatorias = OjoCirithUngol.detectarObligatorias(mapa);
             fin = System.nanoTime();
@@ -44,7 +44,7 @@ public class Main { //Declaración de la clase principal
             System.out.println("El tiempo empleado para el calculo del problema 2 es: " + tiempoOjoCirithMS + "ms" );  
             
             // problema 3
-            
+            System.out.println("\nProblema 3:");           
             inicio = System.nanoTime();
             SenderosDruadan.encontrarRutas(mapa, C);
             fin = System.nanoTime();
